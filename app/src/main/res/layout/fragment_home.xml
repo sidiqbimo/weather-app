@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment"
+    android:background="@color/blue_dark"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/weatherdetails_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+
+        android:background="@drawable/rounded_backgroundwhite"
+        android:paddingVertical="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_sun">
+
+
+        <TextView
+            android:id="@+id/date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today, October 7"
+
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/degree_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="29°C"
+            android:textColor="@color/white"
+            android:textSize="36dp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/date_text" />
+
+        <TextView
+            android:id="@+id/feel_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sunny"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/degree_text" />
+
+        <LinearLayout
+            android:id="@+id/wind_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/feel_text"
+            android:layout_marginTop="16dp">
+
+            <ImageView
+                android:id="@+id/ico_wind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ico_wind" />
+
+            <TextView
+                android:id="@+id/wind_teller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wind"
+                android:textColor="@color/white"
+                android:layout_marginHorizontal="8dp"/>
+
+            <TextView
+                android:id="@+id/wind_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15 km/h"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hum_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/wind_container">
+
+            <ImageView
+                android:id="@+id/ico_hum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ico_hum" />
+
+            <TextView
+                android:id="@+id/hum_teller"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Hum"
+                android:textColor="@color/white"
+                android:layout_marginHorizontal="8dp"/>
+
+            <TextView
+                android:id="@+id/hum_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="26%"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/img_sun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_sun"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:id="@+id/ico_pin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ico_location"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/cityname_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gunungkidul"
+            android:fontFamily="@font/regular"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@id/ico_pin"
+            app:layout_constraintTop_toTopOf="@id/ico_pin"
+            app:layout_constraintBottom_toBottomOf="@id/ico_pin"
+
+            android:layout_marginLeft="20dp"/>
+
+        <ImageView
+            android:id="@+id/ico_dropdown"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ico_showdown"
+            app:layout_constraintLeft_toRightOf="@id/cityname_text"
+            app:layout_constraintTop_toTopOf="@id/cityname_text"
+            app:layout_constraintBottom_toBottomOf="@id/cityname_text"/>
+
+        <ImageView
+            android:id="@+id/ico_bell"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ico_bell"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
